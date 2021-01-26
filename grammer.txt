@@ -1,0 +1,7 @@
+expr -> term (( PLUS | MINUS ) term)*  # * 0 -> 多次
+
+term -> factor (( MUL | DIY ) factor)*
+
+factor -> INT | FLOAT
+       -> ( PLUS | MINUS ) factor  # -1 +1 ++1 +++1
+       -> LPAREN expr RPAREN
